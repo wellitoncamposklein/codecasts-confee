@@ -1,6 +1,8 @@
-import Main from '../Main'
+import { routes as dashboard } from '../modules/dashboard/index'
+import { routes as auth } from '../modules/auth/index'
 
-export default [
-  {path: '/', component: Main},
-  {path: '/ola/:name', component: Main}
+const root = [
+  { path: '/', redirect: '/dashboard' }
 ]
+
+export default [ ...root, ...dashboard, ...auth ]

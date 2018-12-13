@@ -1,6 +1,6 @@
 <template>
   <header class="page-header row">
-    <h3>Olá {{ $route.params.name}}</h3>
+    <h3>Confee</h3>
   </header>
 </template>
 
