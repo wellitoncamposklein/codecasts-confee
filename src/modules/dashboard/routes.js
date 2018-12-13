@@ -1,5 +1,5 @@
 import Main from './components/Main.vue'
 
 export default [
-  { path: '/dashboard', component: Main }
+  { path: '/dashboard', component: Main, name: 'dashboard.main' }
 ]

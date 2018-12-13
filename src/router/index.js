@@ -4,6 +4,6 @@ import routes from './routes'
 
 Vue.use(VueRouter)
 
-const index = new VueRouter({routes})
+const index = new VueRouter({ routes, linkActiveClass: 'active' })
 
 export default index
