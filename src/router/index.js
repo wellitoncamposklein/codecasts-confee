@@ -6,4 +6,8 @@ Vue.use(VueRouter)
 
 const index = new VueRouter({ routes, linkActiveClass: 'active' })
 
+router.beforeEach((to, from, next) => {
+
+})
+
 export default index
