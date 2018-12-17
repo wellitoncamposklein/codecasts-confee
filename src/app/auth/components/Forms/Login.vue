@@ -12,9 +12,11 @@
     },
     methods: {
       doLogin () {
-        // this.$router.push('/')
         const user = this.user
         this.$store.dispatch('attemptLogin', { ...user })
+          .then(() => {
+            this.$router.push('/')
+          })
       }
     },
     computed: {
@@ -28,18 +30,18 @@
 
 
 <template>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" v-model="user.email" class="form-control">
-        </div>
-        <div class="form-group">
-          <label>Senha</label>
-          <input type="password" v-model="user.password" class="form-control">
-        </div>
-
-        <button type="submit" @click="doLogin" class="btn btn-default" :disabled="!isValid">Entrar</button>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" v-model="user.email" class="form-control">
       </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <input type="password" v-model="user.password" class="form-control">
+      </div>
+
+      <button type="submit" @click="doLogin" class="btn btn-default" :disabled="!isValid">Entrar</button>
     </div>
+  </div>
 </template>
