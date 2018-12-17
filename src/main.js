@@ -15,6 +15,6 @@ new Vue({
   el: '#app',
   render: h => h(App),
   mounted () {
-    Vue.$myLog(this)
+    this.$loader.show()
   }
 })

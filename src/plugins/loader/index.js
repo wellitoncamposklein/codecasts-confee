@@ -1,5 +1,12 @@
 const install = Vue => {
-  Vue.$myLog = value => console.log(value)
+  Vue.prototype.$loader = {
+    show () {
+      console.log({ show: this })
+    },
+    hide () {
+      console.log({ hide: this })
+    }
+  }
 }
 
 export default { install }
