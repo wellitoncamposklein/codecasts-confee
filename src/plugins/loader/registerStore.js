@@ -1,9 +1,7 @@
+import module from './vuex'
+
 const registerStore = store => {
-  store.registerModule('CODECAST_LOADER', {
-    state: {
-      show: false
-    }
-  })
+  store.registerModule('CODECAST_LOADER', { ...module })
 }
 
 export default registerStore
