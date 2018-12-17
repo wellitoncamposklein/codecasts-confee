@@ -16,5 +16,8 @@ new Vue({
   render: h => h(App),
   mounted () {
     this.$loader.show()
+    setTimeout(() => {
+      this.$loader.hide()
+    }, 1000)
   }
 })
