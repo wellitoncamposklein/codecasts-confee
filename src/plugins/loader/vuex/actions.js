@@ -1,4 +1,4 @@
-import  * as types  from './mutations-type'
+import * as types from './mutations-type'
 
 export const showLoader = context => {
   context.commit(types.setShow, true)
