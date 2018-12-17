@@ -1,3 +1,4 @@
+import * as types from './mutations-types'
 import http from 'src/http'
 
 export const attemptLogin = (context, payLoad) => {
@@ -5,7 +6,7 @@ export const attemptLogin = (context, payLoad) => {
   return http.get('http://uinames.com/api/?ext')
     .then(response => response.data)
     .then(data => {
-      context.commit('setToken', data.email)
-      context.commit('setUser', data)
+      context.commit(types.setToken, data.email)
+      context.commit(types.setUser, data)
     })
 }

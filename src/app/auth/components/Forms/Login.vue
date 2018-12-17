@@ -1,4 +1,5 @@
 <script>
+  import { mapActions } from 'vuex'
   import { isEmpty } from 'lodash'
 
   export default {
@@ -11,9 +12,10 @@
       }
     },
     methods: {
+      ...mapActions(['attemptLogin']),
       doLogin () {
         const user = this.user
-        this.$store.dispatch('attemptLogin', { ...user })
+        this.attemptLogin({ ...user })
           .then(() => {
             this.$router.push('/')
           })
