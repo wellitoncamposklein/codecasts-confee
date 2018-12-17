@@ -1,10 +1,11 @@
 <script>
-  import Left from './left.vue'
-  import Brand from './brand.vue'
+  import Left from './left'
+  import Brand from './brand'
+  import Right from './right'
 
   export default {
     name: 'confee-header',
-    components: { Left, Brand },
+    components: { Left, Brand, Right },
     data () {
       return { isOpen: false }
     },
@@ -22,6 +23,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" :class="{ in: isOpen }">
         <Left />
+        <Right />
       </div>
       <!-- /.navbar-collapse -->
     </div>
