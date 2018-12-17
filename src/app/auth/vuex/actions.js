@@ -1,10 +1,8 @@
 import * as types from './mutations-types'
-import http from 'src/http'
+import { postLogin } from '../services'
 
 export const attemptLogin = (context, payLoad) => {
-  // context.commit('setToken', 'xxx')
-  return http.get('http://uinames.com/api/?ext')
-    .then(response => response.data)
+  return postLogin(payLoad.email, payLoad.password)
     .then(data => {
       context.commit(types.setToken, data.email)
       context.commit(types.setUser, data)
